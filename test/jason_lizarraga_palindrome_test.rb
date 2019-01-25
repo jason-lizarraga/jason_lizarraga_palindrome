@@ -1,5 +1,6 @@
 require 'test_helper'
 
+# Tests module JasonLizarragaPalindrome
 class JasonLizarragaPalindromeTest < Minitest::Test
   def test_non_palindrome
     refute 'apple'.palindrome?
@@ -17,4 +18,11 @@ class JasonLizarragaPalindromeTest < Minitest::Test
     assert "Madam, I'm Adam.".palindrome?
   end
 
+  def test_integer_non_palindrome
+    refute 12345.palindrome?
+  end
+
+  def test_integer_palindrome
+    assert 73437.palindrome?
+  end
 end
